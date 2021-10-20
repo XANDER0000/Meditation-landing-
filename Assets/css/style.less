@@ -1,0 +1,51 @@
+// compress: true
+
+@import "vars";
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+
+    font-family: 'Merienda One', cursive;
+    font-family: 'Heebo', sans-serif;
+    background-color: rgba(#3BD1BB, .09);
+
+    font-size: 24px;
+    line-height: 130%;
+    font-weight: 400;
+    color: @black;
+    -webkit-font-smoothing: antialiased;
+
+    &.no-scroll {
+        overflow-y: hidden;
+    }
+}
+
+h1, h2, h3, h4, h4, h5 {
+    margin: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+/* Blocks ======================*/
+@import "blocks/header.less";
+@import "blocks/container.less";
+@import "blocks/btn.less";
+@import "blocks/intro.less";
+@import "blocks/cards.less";
+@import "blocks/section-header.less";
+@import "blocks/practice.less";
+@import "blocks/breath.less";
+@import "blocks/best.less";
+@import "blocks/transform.less";
+@import "blocks/footer.less";
+
+@import "helpers";

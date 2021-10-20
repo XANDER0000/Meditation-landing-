@@ -1,0 +1,107 @@
+// main: ../style.less
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 65px;
+    min-height: 50px;
+
+    font-size: 16px;
+    line-height: 19px;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 500;
+    z-index: 10;
+    color: #fff;
+    text-decoration: none;
+    background: none;
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer;
+
+    background: linear-gradient(180deg, #259385 0%, #159685 100%);
+
+    transition: all .2s ease-out, transform .1s ease-in;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        box-shadow: 0px 20px 40px rgba(21, 113, 101, 0.2);
+        filter: drop-shadow(6px 5px 15px rgba(#259385, 0.5));
+        transform: scale (1.03);
+    }
+
+    &:active {
+        box-shadow: 0px 20px 40px rgba(21, 113, 101, 0.2);
+        filter: drop-shadow(4px 5px 15px rgba(#2A407C, 0.5));
+
+        transform: scale(.94);
+    }
+
+    // modification //
+
+    &--header1 {
+        position: relative;
+        color: #8794BA;
+        font-size: 16px;
+        font-weight: 400;
+        background: none;
+        border: none;
+        padding: 0;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 13px;
+            height: 1.5px;
+            background-color: #fff;
+            z-index: 2;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.2s ease-in-out 0s;
+        }
+
+        &:hover {
+            color: #fff;
+            box-shadow: none;
+            filter: none;
+            &::after {
+                visibility: visible;
+                transform: scaleX(1);
+            }
+        }
+    }
+
+    &--header2 {
+        color: #8794BA;
+        font-size: 16px;
+        font-weight: 400;
+        background-color: transparent;
+        border: 1px solid #465B95;
+        height: 40px;
+        padding: 0 53px;
+        margin-left: 40px;
+
+        &:hover {
+            filter: drop-shadow(6px 5px 15px rgba(#EF2A82, 0.5));
+            background-color: #EF2A82;
+            border: 1px solid #EF2A82;
+            color: #fff;
+        }
+    }
+
+
+    &--cards {
+        padding: 5px 35px;
+        min-height: 45px;
+        font-weight: 400;
+        vertical-align:bottom;
+    }
+}

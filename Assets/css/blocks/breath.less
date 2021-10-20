@@ -1,0 +1,131 @@
+// main: ../style.less
+
+.breath {
+    position: relative;
+    margin-bottom: 100px;
+    @media @mobile {
+        margin-bottom: 70px;
+    }
+}
+
+.breath__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 1200px) {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+.breath__col {
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+
+    @media (max-width: 1200px) {
+        margin: 0 0 50px 0;
+    }
+}
+
+.breath__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("../images/breath/bg.png");
+    padding: 20px 0 20px 40px;
+    width: 100%;
+    height: 100%;
+    min-height: 150px;
+    min-width: 560px;
+    background-size: cover;
+    box-shadow: -26px 4px 79px rgba(168, 207, 202, 0.39);
+    border-radius: 15px;
+    margin-bottom: 30px;
+
+    @media (max-width: 1200px) {
+       min-width: 0;
+    }
+}
+
+.breath__item_title {
+    font-size: 24px;
+    font-weight: 400;
+    color: #000;
+    line-height: 130%;
+    margin-bottom: 5px;
+}
+
+.breath__item_subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 130%;
+    max-width: 620px;
+}
+
+.breath__button_inner {
+    margin: 0 20px 0 170px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 560px) {
+        margin: 0 20px 0 70px;
+    }
+
+    @media (max-width: 350px) {
+        margin: 0 10px 0 40px;
+    }
+}
+
+.breath__button {
+    border-radius: 50%;
+    border: 1.5px #fff solid;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.3));
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(180deg, #259385 0%, #159685 100%);
+    box-shadow: 0px 25px 30px rgba(179, 228, 221, 0.3), 0px 9px 24px rgba(26, 127, 114, 0.23);
+    width: 20px;
+    height: 20px;
+    padding: 24px;
+    cursor: pointer;
+
+    img {
+        position: absolute;
+        left: 34%;
+        top: 22%;
+    }
+
+}
+
+.breath__content_img {
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.breath__bg_img1 {
+    position: absolute;
+    left: 0;
+    top: -20%;
+    z-index: -1;
+}
+
+.breath__bg_img2 {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    z-index: -1;
+}
+
+.breath__bg_img3 {
+    position: absolute;
+    right: 2%;
+    top: 20%;
+    z-index: -1;
+}
